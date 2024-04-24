@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@font-face {
+  font-family: Osmanthus;
+  src: url(../Fonts/Osmanthus.otf) format(opentype);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Opm;
+  src: url(../Fonts/OPM.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  text-decoration: none;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: rgb(127, 169, 240);
+  background-image: url(/img/estrellas.png);
+}
+.logo {
+  display: flex;
+  gap: 5px;
+  position: relative;
+  justify-content: center;
+}
+.logo_2 {
+  display: flex;
+  justify-content: center;
+}
+.texto_titulo {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+
+  justify-content: center;
+}
+img {
+  max-width: 25%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+#titulo {
+  font-family: Osmanthus, sans-serif;
+  font-size: 2.4em;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  text-shadow: 11px 2px 62px #e81919;
+  -webkit-text-stroke: #000000 0.6px;
+}
+#titulo_2 {
+  font-family: Opm, sans-serif;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 100;
+  color: #000;
+  text-shadow: 14px 2px 61px #e81919;
+  -webkit-text-stroke: #ffffff 0.2px;
+}
+#titulo_3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1em;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  font-size: 0.8em;
+  position: absolute;
+  top: 68px;
+  left: 126px;
+  /* text-shadow: 2px 2px 1px #000000; */
+}
+
+.navbar > .container {
+  display: block;
+}
+.nav-link {
+  padding: 3px;
+  font-size: 0.5em;
+}
+.nav-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: 1px 2px 18px #e81919;
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    max-width: 30%;
+  }
+  #titulo {
+    font-size: 4em;
+  }
+  #titulo_2 {
+    font-size: 2.5em;
+  }
+  #titulo_3 {
+    font-size: 2em;
+    position: absolute;
+    top: 125px;
+    left: 360px;
+  }
+  .navbar-nav {
+    gap: 10px;
+  }
+  .nav-link {
+    font-size: 1em;
+  }
+}
+@media screen and (1024px <= width) {
+  body {
+    margin: auto;
+    width: 60%;
+  }
+  img {
+    max-width: 20%;
+  }
+  .nav-link {
+    font-size: 1em;
+  }
+  #titulo {
+    font-size: 3.5em;
+  }
+  #titulo_2 {
+    font-size: 2em;
+  }
+  #titulo_3 {
+    font-size: 2em;
+    position: absolute;
+    top: 94px;
+    left: 250px;
+  }
+  .navbar-nav {
+    margin: 25px 0px 1px 0px;
+    justify-content: space-around;
+  }
+}
