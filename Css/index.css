@@ -40,10 +40,9 @@ header {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-
   justify-content: center;
 }
-img {
+.imagen_1 {
   max-width: 25%;
 }
 
@@ -79,7 +78,6 @@ h3 {
   position: absolute;
   top: 68px;
   left: 126px;
-  /* text-shadow: 2px 2px 1px #000000; */
 }
 
 .navbar > .container {
@@ -88,6 +86,8 @@ h3 {
 .nav-link {
   padding: 3px;
   font-size: 0.5em;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 .nav-link:hover {
   font-weight: bold;
@@ -96,7 +96,7 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
-  img {
+  .imagen_1 {
     max-width: 30%;
   }
   #titulo {
@@ -111,19 +111,28 @@ h3 {
     top: 125px;
     left: 360px;
   }
-  .navbar-nav {
-    gap: 10px;
+  .navbar {
+    min-height: 100px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+  }
+  .nav-item {
+    border-right: 2px solid black;
+  }
+  .nav-item:last-child {
+    border-right: 0;
   }
   .nav-link {
     font-size: 1em;
+    padding: 10px 15px;
   }
 }
-@media screen and (1024px <= width) {
+@media screen and (1024px <= width <= 1399px) {
   body {
     margin: auto;
     width: 60%;
   }
-  img {
+  .imagen_1 {
     max-width: 20%;
   }
   .nav-link {
@@ -144,5 +153,17 @@ h3 {
   .navbar-nav {
     margin: 25px 0px 1px 0px;
     justify-content: space-around;
+  }
+}
+@media screen and (1400px <= width) {
+  body {
+    margin: auto;
+    width: 60%;
+  }
+  #titulo_3 {
+    font-size: 2.5em;
+    position: absolute;
+    top: 130px;
+    left: 545px;
   }
 }
