@@ -10,18 +10,19 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-      <link 
-      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="Css/index.css" />
     <link rel="stylesheet" href="Css/footer.css" />
 
     <title>Marte Agencia de Viajes</title>
   </head>
-  <body>
+  <body id="inicio">
     <header>
       <nav class="navbar navbar-expand-md">
         <div class="container">
@@ -117,19 +118,18 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="img/camino.jpg" class="d-block w-100" alt="..." />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Primer Destino</h5>
-                  <p>CARROUSEL CON 4 DESTINOS</p>
+                <div class="carousel-caption sobreimpreso">
+                  <time>FECHA</time>
+                  <h5>TITULO</h5>
+                  <p class="d-none d-md-block">SUBTITULO</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="img/chalten.png" class="d-block w-100" alt="..." />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Segundo Destino</h5>
-                  <p>
-                    Some representative placeholder content for the second
-                    slide.
-                  </p>
+                <div class="carousel-caption sobreimpreso">
+                  <time>FECHA</time>
+                  <h5>TITULO</h5>
+                  <p class="d-none d-md-block">SUBTITULO</p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -138,11 +138,10 @@
                   class="d-block w-100"
                   alt="..."
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>3 Destino</h5>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
+                <div class="carousel-caption sobreimpreso">
+                  <time>FECHA</time>
+                  <h5>TITULO</h5>
+                  <p class="d-none d-md-block">SUBTITULO</p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -151,11 +150,10 @@
                   class="d-block w-100"
                   alt="..."
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>4 destino</h5>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
+                <div class="carousel-caption sobreimpreso">
+                  <time>FECHA</time>
+                  <h5>TITULO</h5>
+                  <p class="d-none d-md-block">SUBTITULO</p>
                 </div>
               </div>
             </div>
@@ -185,7 +183,31 @@
             </button>
           </div>
         </div>
-        <div class="oferta">OFERTA ESPECIAL CATARATAS??</div>
+        <div class="oferta">
+          <h3 class="titulo_oferta">¡Super Oferta Especial!</h3>
+          <div class="viajes">
+            <div class="cataratas">
+              <img
+                src="img/cataratas.png"
+                class="cataratas_1"
+                alt="cataratas"
+              />
+            </div>
+            <div class="info">
+              <h4>Cataratas del Iguazú</h4>
+              <p>4 Días - 3 Noches</p>
+              <p>
+                Vuelo + Hotel 4 <span class="ph--star-bold"></span> +
+                Excursiones
+              </p>
+              <p>$250.000 por persona</p>
+              <p>Salida Junio 2024</p>
+              <button class="btn btn-primary">
+                <a href="contacto.html">RESERVA YA</a>
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="foto_1 card m-2">
           <img src="img/cataratas2.png" class="card-img-top" alt="..." />
           <div class="card-body">
@@ -207,59 +229,82 @@
             <p class="card-text">Descripción de la tarjeta.</p>
           </div>
         </div>
-        
-        <div class="proximamente">PROXIMAMENTE??
-          
+
+        <div class="proximamente">PROXIMAMENTE??</div>
+      </div>
+      <a href="#inicio" class="btn btn-default" id="subir">SUBIR</a>
+    </main>
+
+    <!-- Zona de footer -->
+
+    <footer>
+      <div class="navigation-section" style="display: flex; justify-content: ">
+        <div class="logo-section" style="margin: 0 10px">
+          <img src="img/Logo_marte.png" class="minilogo2x" alt="" />
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              class="social-icon in"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="social-icon fb"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              class="social-icon tw"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="social-icon li"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <h6>Marte te espera..</h6>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096036!2d144.95373531531643!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e41!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1630964093751!5m2!1sen!2sus"
+            width="200"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+            Tu navegador no soporta iframes.
+          </iframe>
+        </div>
+        <div class="footer-column" style="margin: 0 0px">
+          <h3>Viajes</h3>
+          <a href="#">Europa</a>
+          <a href="#">America</a>
+          <a href="#">Conoce Argentina</a>
+        </div>
+        <div class="footer-column" style="margin: 0 0px">
+          <h3>Hoteles</h3>
+          <a href="#">Descubri destinos</a>
+          <a href="#">Paquetes a tu medida</a>
+          <a href="#">Oportunidades</a>
+        </div>
+        <div class="footer-column" style="margin: 0 0px">
+          <h3>Contactos</h3>
+          <a href="#">Redes Sociales</a>
+          <a href="#">Telefonos</a>
+          <a href="#">Sucursales</a>
+          <a href="#">Contactanos</a>
         </div>
       </div>
-    </main>
-    
 
-   <!-- Zona de footer -->
-
-<footer>
-
-  <div class="navigation-section" style="display: flex; justify-content:;">
-    <div class="logo-section" style="margin: 0 10px;">
-      <img src="img/Logo_marte.png" class="minilogo2x" alt="">
-      <div class="social-icons">
-          <a href="https://www.instagram.com" target="_blank" class="social-icon in"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/" target="_blank" class="social-icon tw"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/" target="_blank" class="social-icon li"><i class="fab fa-linkedin-in"></i></a>
+      <div class="developers-section">
+        <p>@Webmasters: Matias Goenaga ,Walter Mosqueda</p>
       </div>
-    <h6>Marte te espera..</h6>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096036!2d144.95373531531643!3d-37.817209979751984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e41!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1630964093751!5m2!1sen!2sus" 
-        width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-            Tu navegador no soporta iframes.
-    </iframe>
-    </div>
-    <div class="footer-column" style="margin: 0 0px;">
-        <h3>Viajes</h3>
-        <a href="#">Europa</a>
-        <a href="#">America</a>
-        <a href="#">Conoce Argentina</a>
-    </div>
-    <div class="footer-column" style="margin: 0 0px;">
-        <h3>Hoteles</h3>
-        <a href="#">Descubri destinos</a>
-        <a href="#">Paquetes a tu medida</a>
-        <a href="#">Oportunidades</a>
-    </div>
-    <div class="footer-column" style="margin: 0 0px;">
-        <h3>Contactos</h3>
-        <a href="#">Redes Sociales</a>
-        <a href="#">Telefonos</a>
-        <a href="#">Sucursales</a>
-        <a href="#">Contactanos</a>
-    </div>
-</div>
- 
-  <div class="developers-section">
-      <p>@Webmasters: Matias Goenaga ,Walter Mosqueda</p>
-  </div>
-</footer>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

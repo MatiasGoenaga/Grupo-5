@@ -98,20 +98,19 @@ h3 {
 }
 .contenedor_tres_columnas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3);
+  grid-template-rows: repeat(4);
+  gap: 10px;
 }
 .carrou {
   grid-column: span 3;
-  width: 95%;
+  width: 100%;
   justify-self: center;
-  padding: 10px;
 }
 
 .oferta {
   grid-column: span 3;
-  background-color: blue;
+  background: #eee;
 }
 .foto_1 {
   background-color: darkgreen;
@@ -127,6 +126,80 @@ h3 {
 .proximamente {
   grid-column: span 3;
   background-color: yellow;
+}
+.sobreimpreso {
+  background-image: url(../img/transparent-black.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 45%;
+  bottom: 0;
+}
+#subir {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+  background: #eee;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 0.5em;
+  color: #000000;
+}
+#subir:hover {
+  background: rgb(127, 169, 240);
+  font-weight: bold;
+}
+.viajes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.cataratas {
+  width: 100%;
+  padding: 10px;
+}
+.cataratas_1 {
+  width: 100%;
+  border-radius: 10px;
+}
+.titulo_oferta {
+  font-size: 1em;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.info {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+.info h4 {
+  font-size: 1em;
+  font-weight: 900;
+}
+.ph--star-bold {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23f7db26' d='M243 96a20.33 20.33 0 0 0-17.74-14l-56.59-4.57l-21.84-52.81a20.36 20.36 0 0 0-37.66 0L87.35 77.44L30.76 82a20.45 20.45 0 0 0-11.66 35.88l43.18 37.24l-13.2 55.7A20.37 20.37 0 0 0 79.57 233L128 203.19L176.43 233a20.39 20.39 0 0 0 30.49-22.15l-13.2-55.7l43.18-37.24A20.43 20.43 0 0 0 243 96m-70.47 45.7a12 12 0 0 0-3.84 11.86L181.58 208l-47.29-29.08a12 12 0 0 0-12.58 0L74.42 208l12.89-54.4a12 12 0 0 0-3.84-11.86l-42.27-36.5l55.4-4.47a12 12 0 0 0 10.13-7.38L128 41.89l21.27 51.5a12 12 0 0 0 10.13 7.38l55.4 4.47Z'/%3E%3C/svg%3E");
+}
+p {
+  margin-bottom: 0;
+}
+.btn-primary a {
+  color: #ffff;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -165,6 +238,31 @@ h3 {
     font-size: 1em;
     padding: 10px 15px;
   }
+  #subir {
+    font-size: 1em;
+    width: 15%;
+  }
+  .viajes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+  .cataratas {
+    width: 40%;
+  }
+  .titulo_oferta {
+    font-size: 2em;
+  }
+  .info {
+    width: 60%;
+    font-size: 1.5em;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+  }
+  .ph--star-bold {
+    width: 24px;
+    height: 24px;
+  }
 }
 @media screen and (1024px <= width <= 1399px) {
   body {
@@ -193,6 +291,12 @@ h3 {
     margin: 25px 0px 1px 0px;
     justify-content: space-around;
   }
+  .cataratas {
+    width: 50%;
+  }
+  .info {
+    width: 50%;
+  }
 }
 @media screen and (1400px <= width) {
   body {
@@ -204,5 +308,22 @@ h3 {
     position: absolute;
     top: 130px;
     left: 545px;
+  }
+  #subir {
+    width: 10%;
+  }
+  .cataratas {
+    width: 60%;
+  }
+  .titulo_oferta {
+    font-size: 2.5em;
+  }
+  .info {
+    width: 40%;
+    font-size: 2em;
+  }
+  .ph--star-bold {
+    width: 32px;
+    height: 32px;
   }
 }
