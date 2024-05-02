@@ -98,9 +98,8 @@ h3 {
 }
 .contenedor_tres_columnas {
   display: grid;
-  grid-template-columns: repeat(3);
-  grid-template-rows: repeat(4);
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
 }
 .carrou {
   grid-column: span 3;
@@ -112,16 +111,21 @@ h3 {
   grid-column: span 3;
   background: #eee;
 }
-.foto_1 {
-  background-color: darkgreen;
+.patagonia {
+  grid-column: span 3;
+  text-align: center;
 }
-
-.foto_2 {
-  background-color: brown;
+.title_name {
+  text-align: center;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
 }
-
-.foto_3 {
-  background-color: cyan;
+.titulo_patagonia {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 .proximamente {
   grid-column: span 3;
@@ -201,6 +205,22 @@ p {
   color: #ffff;
   text-decoration: none;
 }
+time {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+.carousel_title {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 10px;
+}
+.carousel_parrafo {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 250%;
+  text-align: justify;
+  padding: 10px;
+}
 
 @media screen and (min-width: 768px) {
   body {
@@ -262,6 +282,12 @@ p {
   .ph--star-bold {
     width: 24px;
     height: 24px;
+  }
+  .title_name {
+    font-size: 1.8em;
+  }
+  .titulo_patagonia {
+    font-size: 2em;
   }
 }
 @media screen and (1024px <= width <= 1399px) {
@@ -325,5 +351,20 @@ p {
   .ph--star-bold {
     width: 32px;
     height: 32px;
+  }
+  time {
+    font-size: 1.5em;
+  }
+  .carousel_title {
+    font-size: 2.5em;
+  }
+  .carousel_parrafo {
+    font-size: 1.5em;
+    line-height: 200%;
+    text-align: justify;
+    padding: 10px;
+  }
+  .titulo_patagonia {
+    font-size: 2.5em;
   }
 }
