@@ -1,5 +1,18 @@
 @import url(index.css);
 
+body::after {
+  content: "";
+  background: url('../img/travel.png');
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  height: 100vh; 
+  width: 100vw; 
+  z-index: -1; 
+  background-size: cover;
+  filter: blur(05px);
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +50,7 @@
 
 /* Estilos para la mini ventana */
 .info-window {
-  display:none;
+  opacity: 0;
   position: absolute;
   background-color: rgba(37, 29, 29, 0.445); /* Blanco semi-transparente */
   color: white;
@@ -49,16 +62,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-   /* Agrega el desenfoque al fondo */
-   backdrop-filter: blur(5px);
-    /* Hace que los bordes sean redondeados */
+  /* Agrega el desenfoque al fondo */
+  backdrop-filter: blur(5px);
+  /* Hace que los bordes sean redondeados */
   border-radius: 20px;
-  }
+  /* Agrega la transición */
+  transition: opacity 0.2s ease-in-out;
+  transition-delay: 0.2s; /* Agrega el retardo */
+}
 
 /* Muestra la mini ventana cuando se pasa el mouse sobre la tarjeta */
 .tarjetaX:hover .info-window {
-  display: block;
+  opacity: 1;
 }
+
 
 
 /* Estilos para el botón */
@@ -89,3 +106,4 @@ border-radius: 10px;
     max-width: 80%;
     padding: 6px 8px;
   }
+}
