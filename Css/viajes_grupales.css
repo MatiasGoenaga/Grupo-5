@@ -78,7 +78,6 @@
 
 .info-button:hover {
   background-color: #04a6dc; /* Cambia el color de fondo a tu gusto */
-  background-color: ; /* Cambia el color de fondo a tu gusto */
   color: whitesmoke; /* Cambia el color del texto a tu gusto */
 border-radius: 10px;
 }
@@ -90,5 +89,3 @@ border-radius: 10px;
     max-width: 80%;
     padding: 6px 8px;
   }
-
-
