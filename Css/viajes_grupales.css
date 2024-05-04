@@ -1,8 +1,9 @@
 @import url(index.css);
 
+
 body::after {
   content: "";
-  background: url('../img/travel.png');
+  background: url('../img/fondo4.png');
   position: fixed; 
   top: 0; 
   left: 0; 
@@ -10,7 +11,7 @@ body::after {
   width: 100vw; 
   z-index: -1; 
   background-size: cover;
-  filter: blur(05px);
+  filter: blur(15px);
 }
 
 .grid {
@@ -39,7 +40,7 @@ body::after {
 }
 
 .tarjetaX {
-  background-color: #9d61fe88; /* Cambia el color de fondo de la tarjeta 1 */
+  background-color: #9d61fe59; /* Cambia el color de fondo de la tarjeta 1 */
   color: #14171a; /* Cambia el color del texto de la tarjeta 1 */
 }
 
