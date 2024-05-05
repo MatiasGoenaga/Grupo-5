@@ -21,6 +21,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url(../img/fondo6.png);
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el cuerpo de la página */
+  backdrop-filter: blur(5px); /* Desenfoca el fondo */
+  
 }
 header {
   background-image: url(../img/estrellas.png);
@@ -85,7 +90,7 @@ h3 {
 }
 .nav-link {
   padding: 3px;
-  font-size: 0.5em;
+  font-size: 1.0em;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   text-align: center;
 }
@@ -293,7 +298,7 @@ time {
 @media screen and (1024px <= width <= 1399px) {
   body {
     margin: auto;
-    width: 60%;
+    width: 75%;
   }
   .imagen_1 {
     max-width: 20%;
@@ -327,7 +332,7 @@ time {
 @media screen and (1400px <= width) {
   body {
     margin: auto;
-    width: 60%;
+    width: 75%;
   }
   #titulo_3 {
     font-size: 2.5em;

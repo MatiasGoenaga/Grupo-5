@@ -1,6 +1,6 @@
 /* Zona */
 footer {
-  background-color: #108ddb; 
+  background-color: #2eaaf74e; 
   color: hsla(0, 70%, 4%, 0.794); 
   padding: 20px 0;
 }
@@ -87,7 +87,7 @@ footer {
 
 .footer-column a {
   text-decoration: none; /* Quitar subrayado de enlaces */
-  color: #c3cafb;
+  color: #7c13be;
   display: block; /* que los enlaces ocupen todo el ancho disponible */
   margin-bottom: 15px; /* espacio entre los enlaces */
   margin-top: 15px;
