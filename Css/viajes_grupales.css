@@ -1,6 +1,5 @@
 @import url(index.css);
-
-
+@import url(footer.css);
 body {
   margin: 0;
   padding: 0;
@@ -13,10 +12,10 @@ body {
 
 body::after {
   content: "";
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  z-index: -1; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
   background-size: cover;
   filter: blur(10px);
 }
@@ -63,7 +62,7 @@ body::after {
   background-color: rgba(37, 29, 29, 0.445); /* Blanco semi-transparente */
   color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
   /* Centra la mini ventana en la tarjeta */
@@ -84,8 +83,6 @@ body::after {
   opacity: 1;
 }
 
-
-
 /* Estilos para el botón */
 .info-button {
   display: inline-block;
@@ -104,7 +101,7 @@ body::after {
 .info-button:hover {
   background-color: #04a6dc; /* Cambia el color de fondo a tu gusto */
   color: whitesmoke; /* Cambia el color del texto a tu gusto */
-border-radius: 10px;
+  border-radius: 10px;
 }
 
 /* Ajusta los estilos para pantallas pequeñas */
@@ -123,19 +120,18 @@ border-radius: 10px;
     margin: auto;
     width: 92%;
   }
-}   
-
+}
 
 @media screen and (1024px <= width <= 1399px) {
   body {
     margin: auto;
     width: 75%;
-  }}
-
-  @media screen and (1400px <= width) {
-    body {
-      margin: auto;
-      width: 75%;
-    }
   }
-    
+}
+
+@media screen and (1400px <= width) {
+  body {
+    margin: auto;
+    width: 60%;
+  }
+}
