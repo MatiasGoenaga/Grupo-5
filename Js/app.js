@@ -166,3 +166,35 @@ style="display: flex; justify-content: space-around"
 
 header.innerHTML = encabezado;
 footer.innerHTML = final;
+
+/*validacion contacto */
+
+function validarFormulario() {
+    var nombre = document.getElementById('nombre').value;
+    var apellido = document.getElementById('apellido').value;
+    var email = document.getElementById('mail').value;
+    var telefono = document.getElementById('tel').value;
+    var provincia = document.getElementById('prov').value;
+    var consulta = document.getElementById('text_area').value;
+  
+    if(nombre === "" || apellido === "" || email === "" || telefono === "" || provincia === "" || consulta === "") {
+      alert("Todos los campos son obligatorios.");
+      return false;
+    }
+  
+    var expresionCorreo = /\w+@\w+\.+[a-z]/;
+    if(!expresionCorreo.test(email)) {
+      alert("El correo electrónico no es válido.");
+      return false;
+    }
+  
+    if(telefono.length < 9 || telefono.length > 14) {
+      alert("El teléfono no es válido.");
+      return false;
+    }
+  
+    alert("Formulario enviado correctamente.");
+    return true;
+  }
+  
+  

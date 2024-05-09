@@ -7,7 +7,7 @@ body {
   background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
   background-size: cover; /* Asegura que la imagen de fondo cubra todo el cuerpo de la página */
   backdrop-filter: blur(5px); /* Desenfoca el fondo */
-  background-image: url(../img/fondo6.png);
+  background-image: url(../img/fondo5.png);
 }
 
 body::after {

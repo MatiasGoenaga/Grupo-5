@@ -1,7 +1,7 @@
 /* Zona */
 footer {
-  background-color: #2eaaf74e; 
-  color: hsla(0, 70%, 4%, 0.794); 
+  background-color: #00000036; 
+  color: hsla(0, 100%, 96%, 0.794); 
   padding: 20px 0;
 }
 
@@ -87,7 +87,7 @@ footer {
 
 .footer-column a {
   text-decoration: none; /* Quitar subrayado de enlaces */
-  color: #7c13be;
+  color: #ba94d3;
   display: block; /* que los enlaces ocupen todo el ancho disponible */
   margin-bottom: 15px; /* espacio entre los enlaces */
   margin-top: 15px;
@@ -98,6 +98,27 @@ footer {
 }
 
 
+@media screen and (min-width: 768px) {
+  body {
+    margin: auto;
+    width: 92%;
+  }
+}   
+
+
+@media screen and (1024px <= width <= 1399px) {
+  body {
+    margin: auto;
+    width: 75%;
+  }}
+
+  @media screen and (1400px <= width) {
+    body {
+      margin: auto;
+      width: 75%;
+    }
+  }
+    
 /* devs */
 .developers-section {
   text-align: center;

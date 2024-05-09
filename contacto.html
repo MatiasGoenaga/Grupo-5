@@ -25,7 +25,7 @@
     <header id="header"></header>
     <main>
       <div class="uno">
-        <form class="row" method="">
+        <form class="row" method="POST" onsubmit="return validarFormulario()" novalidate>
           <h1 id="titulo_form">Formulario de Contacto</h1>
           <div class="col-6 mb-3">
             <label class="label fs-4 fw-bold" for="nombre">Nombre</label>
@@ -43,6 +43,7 @@
               id="mail"
               class="form-control"
               placeholder="email@email.com"
+              title="Por favor, ingrese un mail valido , ej: email@email.com "
               required
             />
           </div>
@@ -59,14 +60,16 @@
               >Teléfono
             </label>
             <input
-              type="tel"
-              class="form-control"
-              id="tel"
-              name="tel"
-              minlength="9"
-              maxlength="14"
-              required
-            />
+            type="tel"
+            class="form-control"
+            id="tel"
+            name="tel"
+            pattern="[0-9]{9,14}"
+            minlength="9"
+            maxlength="14"
+            title="Por favor, ingrese un número de teléfono válido de 9 a 14 dígitos."
+            required
+          />
           </div>
           <div class="mt-1">
             <label class="label fs-4 fw-bold" for="prov">Provincia </label>
@@ -136,8 +139,8 @@
           <div class="boton mb-3">
             <button class="btn btn-primary fs-5" type="submit">Enviar</button>
           </div>
-          <br /><br /><br /><br /><br />
-          <h2 class="text-center fs-2 mb-2">Gracias por su consulta</h2>
+          <br/><br/><br/><br/><br/>
+          <h2 class="text-center fs-2">Gracias por su consulta</h2>
         </form>
       </div>
     </main>
