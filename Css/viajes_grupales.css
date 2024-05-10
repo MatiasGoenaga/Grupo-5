@@ -1,24 +1,6 @@
 @import url(index.css);
 @import url(footer.css);
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
-  background-size: cover; /* Asegura que la imagen de fondo cubra todo el cuerpo de la página */
-  backdrop-filter: blur(5px); /* Desenfoca el fondo */
-  background-image: url(../img/fondo5.png);
-}
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-size: cover;
-  filter: blur(10px);
-}
 
 .grid {
   display: flex;
@@ -115,23 +97,3 @@ body::after {
 
 /* responsive */
 
-@media screen and (min-width: 768px) {
-  body {
-    margin: auto;
-    width: 92%;
-  }
-}
-
-@media screen and (1024px <= width <= 1399px) {
-  body {
-    margin: auto;
-    width: 75%;
-  }
-}
-
-@media screen and (1400px <= width) {
-  body {
-    margin: auto;
-    width: 60%;
-  }
-}
