@@ -30,8 +30,11 @@ body {
 }
 header {
   background-image: url(../img/estrellas.png);
-  background-color: rgba(73, 43, 43, 0.171);
+  background-color: rgba(241, 11, 172, 0.158);
   color: hsla(0, 23%, 51%, 0.507); 
+  background-size: 70%; /* Esto ajustará el tamaño de la imagen al 50% del contenedor */
+  filter: brightness(110%) contrast(120%);
+
 }
 .logo {
   display: flex;
@@ -104,7 +107,7 @@ h3 {
 .nav-link:hover {
   font-weight: bold;
   text-decoration: underline;
-  text-shadow: 2px 2px 18px #e81919;
+  text-shadow: 2px 2px 18px #814c92ee;
   transform: translateY(-2px);
   transition: all 0.2s;
 }

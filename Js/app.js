@@ -36,7 +36,7 @@ const encabezado = `<nav class="navbar navbar-expand-md">
   <div class="collapse navbar-collapse mx-auto" id="navbarNav">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.html"
+        <a class="nav-link " aria-current="page" href="index.html"
           >INICIO
         </a>
       </li>
