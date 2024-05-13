@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url(footer.css);
 
+
 @font-face {
   font-family: Osmanthus;
   src: url(../Fonts/Osmanthus.otf) format(opentype);
@@ -28,42 +29,73 @@ body {
   background-size: cover; /* Asegura que la imagen de fondo cubra todo el cuerpo de la página */
   backdrop-filter: blur(5px); /* Desenfoca el fondo */
 }
-header {
+
+/* Definición de la animación */
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Aplicación de la animación a la imagen de las estrellas */
+.logo_2::after {
+  content: "";
+  position: absolute;
+  bottom:0% ;
+  left: 0%;
+  width: 52%;
+  height: 200%;
   background-image: url(../img/estrellas.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+  animation: fadeIn 2.5s ease-in-out forwards;
+  pointer-events: none; /* Los clics pasan a través del pseudo-elemento */
+  z-index: 2;
+}
+
+/* Estilos del header */
+header {
+  position: relative;
   background-color: rgba(241, 11, 172, 0.158);
   color: hsla(0, 23%, 51%, 0.507); 
-  background-size: 70%; /* Esto ajustará el tamaño de la imagen al 50% del contenedor */
   filter: brightness(110%) contrast(120%);
 
 }
+
 .logo {
   display: flex;
   gap: 5px;
   position: relative;
   justify-content: center;
+  padding: 2%;
+  
 }
 .logo_2 {
   display: flex;
   justify-content: center;
+  position: relative; /* Asegúrate de que este contenedor sea relativo para que el pseudo-elemento se posicione correctamente */
+  z-index: 1;
 }
 .texto_titulo {
   display: flex;
   flex-direction: column;
   font-weight: bold;
   justify-content: center;
+  
 }
 .imagen_1 {
   max-width: 25%;
+  object-fit: contain;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
+  
 }
 #titulo {
   font-family: Osmanthus, sans-serif;
-  font-size: 2.4em;
+  font-size: 3.4em;
   font-weight: 700;
   text-align: center;
   color: white;
@@ -73,7 +105,7 @@ h3 {
 #titulo_2 {
   font-family: Opm, sans-serif;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1.6em;
   font-weight: 100;
   color: #000;
   text-shadow: 14px 2px 61px #e81919;
@@ -281,6 +313,7 @@ time {
     margin: auto;
     width: 92%;
   }
+  
 
   .imagen_1 {
     max-width: 30%;
@@ -295,8 +328,8 @@ time {
     display: block;
     font-size: 2em;
     position: absolute;
-    top: 125px;
-    left: 360px;
+    top: 150px;
+    left: 60%;
   }
   .navbar {
     min-height: 100px;
@@ -367,7 +400,7 @@ time {
 @media screen and (1024px <= width <= 1399px) {
   body {
     margin: auto;
-    width: 75%;
+    width: 60%;
   }
   .imagen_1 {
     max-width: 20%;
@@ -382,10 +415,11 @@ time {
     font-size: 2em;
   }
   #titulo_3 {
+  
     font-size: 2em;
     position: absolute;
-    top: 100px;
-    left: 450px;
+    top: 125px;
+    left: 54%;
   }
   .navbar-nav {
     margin: 25px 0px 1px 0px;
@@ -407,8 +441,9 @@ time {
     top: 80%;
   }
 }
-@media screen and (1699px <= width <= 1400px) {
-  body {
+
+@media screen and (min-width: 1400px) and (max-width: 1799px) { 
+body {
     margin: auto;
     width: 60%;
   }
@@ -427,8 +462,8 @@ time {
   #titulo_3 {
     font-size: 2em;
     position: absolute;
-    top: 0px;
-    left: 450px;
+    top: 125px;
+    left: 54%;
   }
   #subir {
     width: 10%;
