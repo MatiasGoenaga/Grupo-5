@@ -1,6 +1,9 @@
 @import url(index.css);
 @import url(footer.css);
 
+main {
+  background-color: rgb(255, 255, 255);
+}
 #empresa {
   text-align: center;
   margin-left: 10px;

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url(footer.css);
+@import url(../Js/app.js);
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 @font-face {
   font-family: Osmanthus;
@@ -30,13 +35,9 @@ body {
   backdrop-filter: blur(5px); /* Desenfoca el fondo */
 }
 
-/* Definición de la animación */
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
 
 /* Aplicación de la animación a la imagen de las estrellas */
+
 .logo_2::after {
   content: "";
   position: absolute;
@@ -54,11 +55,13 @@ body {
 
 /* Estilos del header */
 header {
+  border-radius: 30px;
+
   position: relative;
   background-color: rgba(241, 11, 172, 0.158);
   color: hsla(0, 23%, 51%, 0.507); 
   filter: brightness(110%) contrast(120%);
-
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -72,7 +75,7 @@ header {
 .logo_2 {
   display: flex;
   justify-content: center;
-  position: relative; /* Asegúrate de que este contenedor sea relativo para que el pseudo-elemento se posicione correctamente */
+  position: relative; 
   z-index: 1;
 }
 .texto_titulo {
@@ -127,8 +130,6 @@ h3 {
   
 }
 
-
-
 .nav-link {
   padding: 3px;
   font-size: 1em;
@@ -143,28 +144,109 @@ h3 {
   transform: translateY(-2px);
   transition: all 0.2s;
 }
+
+
 main {
-  background-color: #ffffff;
+  background-color: #ffffff07;
 }
+
+/* Carrusel */
+
+.background-image {
+  position: relative;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+  filter: blur(0px);
+  transition: filter 0.3s ease-in-out;
+}
+
+.carousel-item:hover .background-image::before {
+  filter: blur(10px);
+}
+
+
 .contenedor_tres_columnas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3px;
 }
+
+.carrou, .oferta, .patagonia {
+  border-radius: 20px;
+}
+
 .carrou {
+  margin-bottom: 20px;
   grid-column: span 3;
   width: 100%;
   justify-self: center;
+  overflow: hidden;
 }
 
-.oferta {
-  grid-column: span 3;
-  background: #eee;
+.carousel-caption {
+  color: #ffffff;
+  position: relative;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+
 }
+
+.carousel-caption::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(0px); /* Inicialmente, no hay desenfoque */
+  transition: backdrop-filter 0.3s ease-in-out; /* Transición suave del desenfoque */
+}
+
+
+.carousel-caption:hover::before {
+  backdrop-filter: blur(1px); /* Añade desenfoque al pasar el mouse */
+}
+
+.carousel-indicators button {
+  background-color: #855555;
+}
+
+
+/* Section Oferta Cataratas */
+.oferta {
+  color: #f0d4ff;
+  grid-column: span 3;
+  background: linear-gradient(to right, rgba(12, 75, 5, 0.2) , rgba(29, 55, 43, 0.448));
+}
+
+.video-container {
+  width: 100%; /* Cambia esto al tamaño que prefieras */
+  margin-left: 2% auto;
+}
+
+.video-gif {
+  width: 100%;
+  height: auto; /* Esto mantendrá la proporción del video */
+  border-radius: 4%;
+
+}
+
+
+/* Section Patagonia*/
 .patagonia {
+  
   grid-column: span 3;
   text-align: center;
+  
 }
+
 .title_name {
   text-align: center;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -176,8 +258,13 @@ main {
   margin-bottom: 10px;
   padding-top: 10px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+  
 }
+
+/* Section Proxi*/
 .proximamente {
+  margin-top: 20px;
+  margin-bottom: 5px;
   grid-column: span 3;
   position: relative;
   text-align: center;
@@ -313,7 +400,10 @@ time {
     margin: auto;
     width: 92%;
   }
-  
+  .video-container {
+    width: 100% auto; /* Ajusta esto al tamaño que prefieras para pantallas medianas */
+    margin-left: 1%; /* Centra el contenedor del video */
+  }
 
   .imagen_1 {
     max-width: 30%;
@@ -402,6 +492,12 @@ time {
     margin: auto;
     width: 60%;
   }
+  .video-container {
+    width: 105%; /* Ajusta esto al tamaño que prefieras para pantallas medianas */
+    margin-left: 1%; /* Centra el contenedor del video */
+  }
+
+
   .imagen_1 {
     max-width: 20%;
   }

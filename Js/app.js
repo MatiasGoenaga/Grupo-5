@@ -167,6 +167,24 @@ style="display: flex; justify-content: space-around"
 header.innerHTML = encabezado;
 footer.innerHTML = final;
 
+// Selecciona todos los elementos de texto del carrusel
+var captions = document.querySelectorAll('.carousel-caption');
+
+// Añade un listener de eventos a cada elemento de texto del carrusel
+captions.forEach(function(caption) {
+  caption.addEventListener('mouseover', function() {
+    // Añade la clase 'blur' a la imagen de fondo cuando el mouse entra en el texto del carrusel
+    this.previousElementSibling.classList.add('blur');
+  });
+
+  caption.addEventListener('mouseout', function() {
+    // Elimina la clase 'blur' de la imagen de fondo cuando el mouse sale del texto del carrusel
+    this.previousElementSibling.classList.remove('blur');
+  });
+});
+
+
+
 /*validacion contacto */
 
 function validarFormulario() {
@@ -198,3 +216,18 @@ function validarFormulario() {
   }
   
   
+// Selecciona todos los videos con la clase 'video-gif'
+var videos = document.querySelectorAll('.video-gif');
+
+// Añade un listener de eventos a cada video
+videos.forEach(function(video) {
+  // Cuando el mouse entra en el video, comienza la reproducción
+  video.addEventListener('mouseover', function() {
+    video.play();
+  });
+
+  // Cuando el mouse sale del video, pausa la reproducción
+  video.addEventListener('mouseout', function() {
+    video.pause();
+  });
+});

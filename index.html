@@ -26,12 +26,11 @@
     <header id="header"></header>
     <main>
       <div class="contenedor_tres_columnas">
+
+        <!-- Section Carrusel -->
+
         <section class="carrou">
-          <div
-            id="carouselExampleCaptions"
-            class="carousel slide"
-            data-bs-ride="false"
-          >
+      <div id="carouselExampleCaptions" class="carousel slide carousel-slide" data-bs-ride="false">
             <div class="carousel-indicators">
               <button
                 type="button"
@@ -62,14 +61,14 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/europa.png" class="d-block w-100" alt="..." />
+                <img src="img/europa2.png" class="d-block w-100" alt="..." />
                 <div class="carousel-caption sobreimpreso">
                   <time>JUNIO</time>
                   <h5 class="carousel_title">Conocé Europa</h5>
                   <p class="d-none d-md-block carousel_parrafo">
-                    Cinco grandes capitales de Europa para disfrutar de los
+                    Grandes capitales del turismo Mundial para disfrutar de los
                     mejores paisajes y sitios históricos. <br />
-                    Roma, Londres, Madrid, Amsterdam y París te esperan...
+                    Roma, Venezia, Madrid,Barcelona,Amsterdam y París te esperan...
                   </p>
                 </div>
               </div>
@@ -136,31 +135,37 @@
             </button>
           </div>
         </section>
-        <section class="oferta">
-          <h3 class="titulo_oferta">¡Super Oferta Especial!</h3>
-          <div class="viajes">
-            <div class="cataratas">
-              <img
-                src="img/cataratas.png"
-                class="cataratas_1"
-                alt="cataratas"
-              />
-            </div>
-            <div class="info">
-              <h4>Cataratas del Iguazú</h4>
-              <p>4 Días - 3 Noches</p>
-              <p>
-                Vuelo + Hotel 4 <span class="ph--star-bold"></span> +
-                Excursiones
-              </p>
-              <p>$250.000 por persona</p>
-              <p>Salida Junio 2024</p>
-              <button class="btn btn-primary">
-                <a href="contacto.html">RESERVA YA</a>
-              </button>
-            </div>
-          </div>
-        </section>
+
+        <!-- Section Super Oferta  -->
+<section class="oferta">
+  <h3 class="titulo_oferta">¡Super Oferta Especial!</h3>
+  <div class="viajes">
+    <div class="cataratas">
+      <div class="video-container"> <!-- Contenedor agregado -->
+        <video class="d-block w-100 video-gif" autoplay loop muted>
+          <source src="img/cataratasmp4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  
+    <div class="info">
+      <h4>Cataratas del Iguazú</h4>
+      <p>4 Días - 3 Noches</p>
+      <p>
+        Vuelo + Hotel 4 <span class="ph--star-bold"></span> +
+        Excursiones
+      </p>
+      <p>$250.000 por persona</p>
+      <p>Salida Junio 2024</p>
+      <button class="btn btn-primary">
+        <a href="contacto.html">RESERVA YA</a>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+         <!-- Section Patagonia -->
         <section class="patagonia">
           <h2 class="titulo_patagonia">Descubrí la Patagonia</h2>
         </section>
@@ -182,6 +187,8 @@
             <h5 class="card-title title_name">Ushuaia</h5>
           </div>
         </section>
+
+         <!-- Section Proxi -->
         <section class="proximamente">
           <img src="img/marte_04.jpg" class="card-img-top" alt="..." />
           <h4>PRÓXIMAMENTE</h4>
