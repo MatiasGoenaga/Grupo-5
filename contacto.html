@@ -18,6 +18,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Css/contacto.css" />
     <title>Contacto</title>
   </head>
@@ -25,7 +30,13 @@
     <header id="header"></header>
     <main>
       <div class="uno">
-        <form class="row" method="POST" onsubmit="return validarFormulario()" novalidate>
+        <form
+          id="form"
+          class="row"
+          method="POST"
+          onsubmit="validarFormulario(event)"
+          novalidate
+        >
           <h1 id="titulo_form">Formulario de Contacto</h1>
           <div class="col-6 mb-3">
             <label class="label fs-4 fw-bold" for="nombre">Nombre</label>
@@ -60,16 +71,16 @@
               >Teléfono
             </label>
             <input
-            type="tel"
-            class="form-control"
-            id="tel"
-            name="tel"
-            pattern="[0-9]{9,14}"
-            minlength="9"
-            maxlength="14"
-            title="Por favor, ingrese un número de teléfono válido de 9 a 14 dígitos."
-            required
-          />
+              type="tel"
+              class="form-control"
+              id="tel"
+              name="tel"
+              pattern="[0-9]{9,14}"
+              minlength="9"
+              maxlength="14"
+              title="Por favor, ingrese un número de teléfono válido de 9 a 14 dígitos."
+              required
+            />
           </div>
           <div class="mt-1">
             <label class="label fs-4 fw-bold" for="prov">Provincia </label>
@@ -139,7 +150,7 @@
           <div class="boton mb-3">
             <button class="btn btn-primary fs-5" type="submit">Enviar</button>
           </div>
-          <br/><br/><br/><br/><br/>
+          <br /><br /><br /><br /><br />
           <h2 class="text-center fs-2">Gracias por su consulta</h2>
         </form>
       </div>

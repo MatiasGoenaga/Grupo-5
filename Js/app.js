@@ -1,5 +1,6 @@
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
+const form = document.getElementById("form");
 
 const encabezado = `<nav class="navbar navbar-expand-md">
 <div class="container">
@@ -167,67 +168,86 @@ style="display: flex; justify-content: space-around"
 header.innerHTML = encabezado;
 footer.innerHTML = final;
 
-// Selecciona todos los elementos de texto del carrusel
-var captions = document.querySelectorAll('.carousel-caption');
-
-// Añade un listener de eventos a cada elemento de texto del carrusel
-captions.forEach(function(caption) {
-  caption.addEventListener('mouseover', function() {
-    // Añade la clase 'blur' a la imagen de fondo cuando el mouse entra en el texto del carrusel
-    this.previousElementSibling.classList.add('blur');
-  });
-
-  caption.addEventListener('mouseout', function() {
-    // Elimina la clase 'blur' de la imagen de fondo cuando el mouse sale del texto del carrusel
-    this.previousElementSibling.classList.remove('blur');
-  });
-});
-
-
-
-/*validacion contacto */
-
-function validarFormulario() {
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var email = document.getElementById('mail').value;
-    var telefono = document.getElementById('tel').value;
-    var provincia = document.getElementById('prov').value;
-    var consulta = document.getElementById('text_area').value;
-  
-    if(nombre === "" || apellido === "" || email === "" || telefono === "" || provincia === "" || consulta === "") {
-      alert("Todos los campos son obligatorios.");
-      return false;
-    }
-  
-    var expresionCorreo = /\w+@\w+\.+[a-z]/;
-    if(!expresionCorreo.test(email)) {
-      alert("El correo electrónico no es válido.");
-      return false;
-    }
-  
-    if(telefono.length < 9 || telefono.length > 14) {
-      alert("El teléfono no es válido.");
-      return false;
-    }
-  
-    alert("Formulario enviado correctamente.");
-    return true;
-  }
-  
-  
 // Selecciona todos los videos con la clase 'video-gif'
-var videos = document.querySelectorAll('.video-gif');
+var videos = document.querySelectorAll(".video-gif");
 
 // Añade un listener de eventos a cada video
-videos.forEach(function(video) {
+videos.forEach(function (video) {
   // Cuando el mouse entra en el video, comienza la reproducción
-  video.addEventListener('mouseover', function() {
+  video.addEventListener("mouseover", function () {
     video.play();
   });
 
   // Cuando el mouse sale del video, pausa la reproducción
-  video.addEventListener('mouseout', function() {
+  video.addEventListener("mouseout", function () {
     video.pause();
   });
 });
+
+// Selecciona todos los elementos de texto del carrusel
+var captions = document.querySelectorAll(".carousel-caption");
+
+// Añade un listener de eventos a cada elemento de texto del carrusel
+captions.forEach(function (caption) {
+  caption.addEventListener("mouseover", function () {
+    // Añade la clase 'blur' a la imagen de fondo cuando el mouse entra en el texto del carrusel
+    this.previousElementSibling.classList.add("blur");
+  });
+
+  caption.addEventListener("mouseout", function () {
+    // Elimina la clase 'blur' de la imagen de fondo cuando el mouse sale del texto del carrusel
+    this.previousElementSibling.classList.remove("blur");
+  });
+});
+
+/*validacion contacto */
+
+function validarFormulario(event) {
+  event.preventDefault();
+  var nombre = document.getElementById("nombre").value;
+  var apellido = document.getElementById("apellido").value;
+  var email = document.getElementById("mail").value;
+  var telefono = document.getElementById("tel").value;
+  var provincia = document.getElementById("prov").value;
+  var consulta = document.getElementById("text_area").value;
+
+  if (
+    nombre === "" ||
+    apellido === "" ||
+    email === "" ||
+    telefono === "" ||
+    provincia === "" ||
+    consulta === ""
+  ) {
+    alerta("", "Todos los campos son obligatorios", "warning");
+    return false;
+  }
+
+  var expresionCorreo = /\w+@\w+\.+[a-z]/;
+  if (!expresionCorreo.test(email)) {
+    alerta("", "El correo electrónico no es válido", "warning");
+    return false;
+  }
+
+  if (telefono.length < 9 || telefono.length > 14) {
+    alerta("", "El teléfono no es válido", "warning");
+    return false;
+  }
+
+  alerta("", "Formulario enviado correctamente", "success");
+  return true;
+}
+form.addEventListener("submit", function () {
+  form.reset();
+});
+
+const alerta = (titulo, mensaje, icono) => {
+  swal.fire({
+    icon: icono || "",
+    title: titulo || "",
+    text: mensaje,
+    showConfirmButton: false,
+    timer: 1500,
+    width: "240px",
+  });
+};

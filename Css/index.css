@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
-@import url(footer.css);
-@import url(../Js/app.js);
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @font-face {
@@ -35,19 +37,18 @@ body {
   backdrop-filter: blur(5px); /* Desenfoca el fondo */
 }
 
-
 /* Aplicación de la animación a la imagen de las estrellas */
 
 .logo_2::after {
   content: "";
   position: absolute;
-  bottom:0% ;
+  bottom: 0%;
   left: 0%;
   width: 52%;
   height: 200%;
   background-image: url(../img/estrellas.png);
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   animation: fadeIn 2.5s ease-in-out forwards;
   pointer-events: none; /* Los clics pasan a través del pseudo-elemento */
   z-index: 2;
@@ -59,7 +60,7 @@ header {
 
   position: relative;
   background-color: rgba(241, 11, 172, 0.158);
-  color: hsla(0, 23%, 51%, 0.507); 
+  color: hsla(0, 23%, 51%, 0.507);
   filter: brightness(110%) contrast(120%);
   margin-bottom: 20px;
 }
@@ -70,12 +71,11 @@ header {
   position: relative;
   justify-content: center;
   padding: 2%;
-  
 }
 .logo_2 {
   display: flex;
   justify-content: center;
-  position: relative; 
+  position: relative;
   z-index: 1;
 }
 .texto_titulo {
@@ -83,7 +83,6 @@ header {
   flex-direction: column;
   font-weight: bold;
   justify-content: center;
-  
 }
 .imagen_1 {
   max-width: 25%;
@@ -94,7 +93,6 @@ h1,
 h2,
 h3 {
   margin: 0;
-  
 }
 #titulo {
   font-family: Osmanthus, sans-serif;
@@ -127,7 +125,6 @@ h3 {
 
 .navbar > .container {
   display: block;
-  
 }
 
 .nav-link {
@@ -144,7 +141,6 @@ h3 {
   transform: translateY(-2px);
   transition: all 0.2s;
 }
-
 
 main {
   background-color: #ffffff07;
@@ -172,14 +168,15 @@ main {
   filter: blur(10px);
 }
 
-
 .contenedor_tres_columnas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3px;
 }
 
-.carrou, .oferta, .patagonia {
+.carrou,
+.oferta,
+.patagonia {
   border-radius: 20px;
 }
 
@@ -195,7 +192,6 @@ main {
   color: #ffffff;
   position: relative;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
-
 }
 
 .carousel-caption::after {
@@ -209,7 +205,6 @@ main {
   transition: backdrop-filter 0.3s ease-in-out; /* Transición suave del desenfoque */
 }
 
-
 .carousel-caption:hover::before {
   backdrop-filter: blur(1px); /* Añade desenfoque al pasar el mouse */
 }
@@ -218,12 +213,15 @@ main {
   background-color: #855555;
 }
 
-
 /* Section Oferta Cataratas */
 .oferta {
   color: #f0d4ff;
   grid-column: span 3;
-  background: linear-gradient(to right, rgba(12, 75, 5, 0.2) , rgba(29, 55, 43, 0.448));
+  background: linear-gradient(
+    to right,
+    rgba(12, 75, 5, 0.2),
+    rgba(29, 55, 43, 0.448)
+  );
 }
 
 .video-container {
@@ -235,16 +233,12 @@ main {
   width: 100%;
   height: auto; /* Esto mantendrá la proporción del video */
   border-radius: 4%;
-
 }
-
 
 /* Section Patagonia*/
 .patagonia {
-  
   grid-column: span 3;
   text-align: center;
-  
 }
 
 .title_name {
@@ -258,7 +252,6 @@ main {
   margin-bottom: 10px;
   padding-top: 10px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  
 }
 
 /* Section Proxi*/
@@ -428,7 +421,7 @@ time {
   .nav-item {
     margin: 10px;
     margin-left: 30px;
-    margin-right: 30px; 
+    margin-right: 30px;
     padding: 1px; /* Añade relleno para mover la raya hacia adentro */
   }
 
@@ -497,7 +490,6 @@ time {
     margin-left: 1%; /* Centra el contenedor del video */
   }
 
-
   .imagen_1 {
     max-width: 20%;
   }
@@ -511,7 +503,6 @@ time {
     font-size: 2em;
   }
   #titulo_3 {
-  
     font-size: 2em;
     position: absolute;
     top: 125px;
@@ -538,10 +529,10 @@ time {
   }
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1799px) { 
-body {
+@media screen and (min-width: 1400px) {
+  body {
     margin: auto;
-    width: 60%;
+    width: 75%;
   }
   .imagen_1 {
     max-width: 20%;
