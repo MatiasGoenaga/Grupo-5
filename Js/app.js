@@ -31,7 +31,7 @@ const encabezado = `<nav class="navbar navbar-expand-md">
       class="animate__animated animate__zoomInLeft animate__delay-2s"
       id="titulo_3"
     >
-      tu próximo destino..
+      tu próximo destino...
     </h3>
   </div>
   <div class="collapse navbar-collapse mx-auto" id="navbarNav">
