@@ -184,22 +184,6 @@ videos.forEach(function (video) {
   });
 });
 
-// Selecciona todos los elementos de texto del carrusel
-var captions = document.querySelectorAll(".carousel-caption");
-
-// Añade un listener de eventos a cada elemento de texto del carrusel
-captions.forEach(function (caption) {
-  caption.addEventListener("mouseover", function () {
-    // Añade la clase 'blur' a la imagen de fondo cuando el mouse entra en el texto del carrusel
-    this.previousElementSibling.classList.add("blur");
-  });
-
-  caption.addEventListener("mouseout", function () {
-    // Elimina la clase 'blur' de la imagen de fondo cuando el mouse sale del texto del carrusel
-    this.previousElementSibling.classList.remove("blur");
-  });
-});
-
 /*validacion contacto */
 
 function validarFormulario(event) {
